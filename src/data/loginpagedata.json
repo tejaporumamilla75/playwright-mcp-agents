@@ -1,0 +1,84 @@
+{
+  "loginData": [
+    {
+      "username": "admin",
+      "password": "Admin@123",
+      "expectedResult": "Dashboard"
+    },
+    {
+      "username": "invalidUser",
+      "password": "Admin@123",
+      "expectedResult": "Invalid credentials"
+    },
+    {
+      "username": "admin",
+      "password": "WrongPassword",
+      "expectedResult": "Invalid credentials"
+    },
+    {
+      "username": "invalidUser",
+      "password": "WrongPassword",
+      "expectedResult": "Invalid credentials"
+    },
+    {
+      "username": "",
+      "password": "Admin@123",
+      "expectedResult": "Required"
+    },
+    {
+      "username": "admin",
+      "password": "",
+      "expectedResult": "Required"
+    },
+    {
+      "username": "",
+      "password": "",
+      "expectedResult": "Required"
+    },
+    {
+      "username": "   ",
+      "password": "Admin@123",
+      "expectedResult": "Required"
+    },
+    {
+      "username": "admin",
+      "password": "   ",
+      "expectedResult": "Required"
+    },
+    {
+      "username": "' OR '1'='1",
+      "password": "' OR '1'='1",
+      "expectedResult": "Invalid credentials"
+    },
+    {
+      "username": "<script>alert('XSS')</script>",
+      "password": "Admin@123",
+      "expectedResult": "Invalid credentials"
+    },
+    {
+      "username": "../../etc/passwd",
+      "password": "Admin@123",
+      "expectedResult": "Invalid credentials"
+    },
+    {
+      "username": "admin",
+      "password": "<script>alert('XSS')</script>",
+      "expectedResult": "Invalid credentials"
+    },
+    {
+      "username": "@#$%^&*",
+      "password": "!@#$%^&*",
+      "expectedResult": "Invalid credentials"
+    },
+    {
+      "username": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "password": "Admin@123",
+      "expectedResult": "Invalid credentials"
+    },
+    {
+      "username": "ADMIN",
+      "password": "Admin@123",
+      "expectedResult": "Invalid credentials"
+    }
+  ]
+}
